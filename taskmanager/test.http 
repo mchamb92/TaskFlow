@@ -1,0 +1,41 @@
+### Create a new task
+POST http://localhost:8080/api/tasks
+Content-Type: application/json
+
+{
+  "title": "Learn Java",
+  "description": "Practice 1 hour",
+  "completed": false
+}
+
+###
+
+### Get all tasks
+GET http://localhost:8080/api/tasks
+
+###
+
+### Get task by ID
+GET http://localhost:8080/api/tasks/1
+
+###
+
+### Update a task
+PUT http://localhost:8080/api/tasks/1
+Content-Type: application/json
+
+{
+  "title": "Learn Java (Updated)",
+  "description": "Practice 2 hours",
+  "completed": true
+}
+
+###
+
+### Delete a task
+DELETE http://localhost:8080/api/tasks/1
+
+###
+
+### Try to get deleted task (should return 404)
+GET http://localhost:8080/api/tasks/1
